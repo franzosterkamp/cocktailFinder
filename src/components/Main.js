@@ -3,11 +3,32 @@ import styled from "@emotion/styled";
 
 import { getCocktails } from "../api/cocktails";
 
-const CocktailTag = styled.div`
+const CocktailTagList = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
-const CocktailImage = styled.img``;
+const CocktailTag = styled.div`
+  height: 300px;
+  width: 200px;
+  background-color: #ffff55;
+  border-radius: 10px;
+  margin: 5px;
+  display: flex;
+  flex-flow: column;
+`;
+
+const CocktailImage = styled.img`
+  height: 100px;
+  width: 80px;
+`;
+
+const CocktailName = styled.h3`
+  font-size: 16px;
+  color: black;
+  padding: 1px;
+  margin: 0;
+`;
 
 export default function CocktailList() {
   const [cocktails, setCocktails] = React.useState([]);
@@ -17,13 +38,18 @@ export default function CocktailList() {
     setCocktails(searchedCocktails);
   }
 
+  React.useEffect(() => {
+    refreshCocktails();
+  });
+
   return (
-    <CocktailTag>
+    <CocktailTagList>
       {cocktails.map(cocktail => (
-        <div key={cocktail.id}>
-          <CocktailImage src={cocktail.img} alt={cocktail.title} />
-        </div>
+        <CocktailTag key={cocktail.idDrink}>
+          <CocktailName>{cocktail.strDrink}</CocktailName>
+          <CocktailImage src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
+        </CocktailTag>
       ))}
-    </CocktailTag>
+    </CocktailTagList>
   );
 }

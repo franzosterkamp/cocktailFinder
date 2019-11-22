@@ -4,6 +4,6 @@ export async function getCocktails(serachValue) {
   );
 
   const data = await response.json();
-  console.log(data);
-  return data.results;
+
+  return data.drinks;
 }
