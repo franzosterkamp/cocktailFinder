@@ -8,7 +8,6 @@ function App() {
 
   function handleSearch(value) {
     setInput(value);
-    console.log(Input);
   }
 
   return (

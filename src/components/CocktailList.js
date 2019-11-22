@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-
+import cross from "../assets/close.svg";
 import { getCocktails } from "../api/cocktails";
 
 const CocktailTagList = styled.div`
@@ -40,6 +40,8 @@ const CocktailDescription = styled.p`
   overflow: scroll;
 `;
 
+const NoCocktailImage = styled.img``;
+
 const noCocktail = "No Cocktails found !";
 
 // console.log(handleSearch());
@@ -50,7 +52,6 @@ export default function CocktailList({ searchValue }) {
   async function refreshCocktails() {
     const searchedCocktails = await getCocktails(searchValue);
     setCocktails(searchedCocktails);
-    console.log(cocktails);
   }
 
   React.useEffect(() => {
@@ -62,6 +63,7 @@ export default function CocktailList({ searchValue }) {
       <CocktailTagList>
         <CocktailTag key="1">
           <CocktailName>{noCocktail}</CocktailName>
+          <NoCocktailImage src={cross}></NoCocktailImage>
         </CocktailTag>
       </CocktailTagList>
     );
