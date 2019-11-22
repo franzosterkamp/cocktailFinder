@@ -8,7 +8,7 @@ const SearchBar = styled.input`
   font-size: 1rem;
   height: 100%;
   padding: 0;
-  outline-color: #f5c342;
+  outline: none;
 `;
 
 const Search = ({ onSearch, inputValue }) => {
