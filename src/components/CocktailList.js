@@ -51,13 +51,15 @@ const CocktailDataList = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 `;
-const Tag = styled.span`
+const Tag = styled.button`
   font-size: 0.8rem;
   color: black;
+  outline: none;
   padding: 2px;
   margin: 2px;
   background-color: #f9db49;
   border-radius: 5px;
+  border: none;
 `;
 
 const NoCocktailImage = styled.img``;

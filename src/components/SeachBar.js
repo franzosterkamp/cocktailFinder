@@ -19,7 +19,7 @@ const Search = ({ onSearch, inputValue }) => {
 
   return (
     <SearchBar
-      placeholder="Enter Cocktailname"
+      placeholder="Cocktail here!"
       onChange={handleChange}
       value={inputValue}
     ></SearchBar>
