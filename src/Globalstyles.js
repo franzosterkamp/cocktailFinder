@@ -12,7 +12,7 @@ export default function GlobalStyles() {
         }
         body {
           margin: 0;
-          background: #665849;
+          background: #f5c342;
           color: #eaead5;
           font-family: "Kanit", sans-serif;
         }
