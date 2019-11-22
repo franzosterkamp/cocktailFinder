@@ -9,7 +9,7 @@ const CocktailTagList = styled.div`
 `;
 
 const CocktailTag = styled.div`
-  height: 300px;
+  height: 400px;
   width: 200px;
   background-color: #fcef87;
   border-radius: 7px;
@@ -45,6 +45,20 @@ const CocktailDescription = styled.p`
   border-radius: 5px;
 `;
 
+const CocktailDataList = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+`;
+const Tag = styled.span`
+  font-size: 0.8rem;
+  color: black;
+  padding: 2px;
+  margin: 2px;
+  background-color: #f9db49;
+  border-radius: 5px;
+`;
+
 const NoCocktailImage = styled.img``;
 
 const noCocktail = "No Cocktails found !";
@@ -62,7 +76,7 @@ export default function CocktailList({ searchValue }) {
   React.useEffect(() => {
     refreshCocktails();
   });
-
+  console.log(cocktails);
   if (cocktails == null) {
     return (
       <CocktailTagList>
@@ -82,6 +96,13 @@ export default function CocktailList({ searchValue }) {
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrink}
             />
+            <CocktailDataList>
+              <Tag>{cocktail.strIngredient1}</Tag>
+              <Tag>{cocktail.strIngredient1}</Tag>
+              <Tag>{cocktail.strIngredient2}</Tag>
+              <Tag>{cocktail.strIngredient3}</Tag>
+              <Tag>{cocktail.strIngredient4}</Tag>
+            </CocktailDataList>
             <CocktailDescription>
               {cocktail.strInstructionsDE}
             </CocktailDescription>
