@@ -37,6 +37,7 @@ const CocktailName = styled.h3`
 
 const CocktailDescription = styled.p`
   font-size: 0.8rem;
+  margin-top: 5px;
   color: black;
   padding: 2px;
   overflow: scroll;
@@ -98,10 +99,10 @@ export default function CocktailList({ searchValue }) {
             />
             <CocktailDataList>
               <Tag>{cocktail.strIngredient1}</Tag>
-              <Tag>{cocktail.strIngredient1}</Tag>
               <Tag>{cocktail.strIngredient2}</Tag>
               <Tag>{cocktail.strIngredient3}</Tag>
               <Tag>{cocktail.strIngredient4}</Tag>
+              <Tag>{cocktail.strIngredient5}</Tag>
             </CocktailDataList>
             <CocktailDescription>
               {cocktail.strInstructionsDE}
