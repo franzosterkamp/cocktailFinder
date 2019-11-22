@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import Search from "./SeachBar";
+
 import { getCocktails } from "../api/cocktails";
-import { handleSearch } from "./Header";
 
 const CocktailTagList = styled.div`
   display: flex;
@@ -41,6 +40,8 @@ const CocktailDescription = styled.p`
   overflow: scroll;
 `;
 
+const noCocktail = "No Cocktails found !";
+
 // console.log(handleSearch());
 
 export default function CocktailList({ searchValue }) {
@@ -49,23 +50,36 @@ export default function CocktailList({ searchValue }) {
   async function refreshCocktails() {
     const searchedCocktails = await getCocktails(searchValue);
     setCocktails(searchedCocktails);
+    console.log(cocktails);
   }
 
   React.useEffect(() => {
     refreshCocktails();
   });
 
-  return (
-    <CocktailTagList>
-      {cocktails.map(cocktail => (
-        <CocktailTag key={cocktail.idDrink}>
-          <CocktailName>{cocktail.strDrink}</CocktailName>
-          <CocktailImage src={cocktail.strDrinkThumb} alt={cocktail.strDrink} />
-          <CocktailDescription>
-            {cocktail.strInstructionsDE}
-          </CocktailDescription>
+  if (cocktails == null) {
+    return (
+      <CocktailTagList>
+        <CocktailTag key="1">
+          <CocktailName>{noCocktail}</CocktailName>
         </CocktailTag>
-      ))}
-    </CocktailTagList>
-  );
+      </CocktailTagList>
+    );
+  } else
+    return (
+      <CocktailTagList>
+        {cocktails.map(cocktail => (
+          <CocktailTag key={cocktail.idDrink}>
+            <CocktailName>{cocktail.strDrink}</CocktailName>
+            <CocktailImage
+              src={cocktail.strDrinkThumb}
+              alt={cocktail.strDrink}
+            />
+            <CocktailDescription>
+              {cocktail.strInstructionsDE}
+            </CocktailDescription>
+          </CocktailTag>
+        ))}
+      </CocktailTagList>
+    );
 }
