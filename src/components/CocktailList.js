@@ -12,8 +12,10 @@ const CocktailTag = styled.div`
   height: 300px;
   width: 200px;
   background-color: #fcef87;
-  border-radius: 10px;
-  margin: 5px;
+  border-radius: 7px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 8px;
   display: flex;
   flex-flow: column;
 `;
@@ -28,7 +30,7 @@ const CocktailImage = styled.img`
 const CocktailName = styled.h3`
   font-size: 16px;
   color: black;
-  text-align: center;
+  text-align: left;
   padding: 1px;
   margin: 0;
 `;
@@ -36,8 +38,11 @@ const CocktailName = styled.h3`
 const CocktailDescription = styled.p`
   font-size: 0.8rem;
   color: black;
-  margin: 2px;
+  padding: 2px;
   overflow: scroll;
+  height: 100%;
+  background-color: #f5c342;
+  border-radius: 5px;
 `;
 
 const NoCocktailImage = styled.img``;

@@ -16,7 +16,7 @@ const Title = styled.div`
   text-align: center;
   padding: 15px;
   flex-grow: 1;
-  font-size: 1.5rem;
+  font-size: 1rem;
   height: 100%;
   color: black;
   background-color: #f9db49;
