@@ -41,13 +41,13 @@ const CocktailDescription = styled.p`
   overflow: scroll;
 `;
 
-console.log(handleSearch());
+// console.log(handleSearch());
 
-export default function CocktailList() {
+export default function CocktailList({ searchValue }) {
   const [cocktails, setCocktails] = React.useState([]);
 
   async function refreshCocktails() {
-    const searchedCocktails = await getCocktails("gin");
+    const searchedCocktails = await getCocktails(searchValue);
     setCocktails(searchedCocktails);
   }
 

@@ -11,12 +11,9 @@ const SearchBar = styled.input`
   outline-color: #f5c342;
 `;
 
-const Search = ({ onSearch }) => {
-  const [Input, setInput] = React.useState(null);
-
+const Search = ({ onSearch, inputValue }) => {
   function handleChange(event) {
     const value = event.target.value;
-    setInput(value);
     onSearch(value);
   }
 
@@ -24,7 +21,7 @@ const Search = ({ onSearch }) => {
     <SearchBar
       placeholder="Enter Cocktailname"
       onChange={handleChange}
-      value={Input}
+      value={inputValue}
     ></SearchBar>
   );
 };
