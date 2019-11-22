@@ -77,7 +77,7 @@ export default function CocktailList({ searchValue }) {
   React.useEffect(() => {
     refreshCocktails();
   });
-  console.log(cocktails);
+
   if (cocktails == null) {
     return (
       <CocktailTagList>
