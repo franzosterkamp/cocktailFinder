@@ -21,16 +21,17 @@ const CocktailTag = styled.div`
 `;
 
 const CocktailImage = styled.img`
-  height: 150px;
-  width: 120px;
-  margin: 5px;
+  height: 40%;
+  justify-self: center;
+  width: 90%;
+  margin: auto;
   border-radius: 5px;
 `;
 
 const CocktailName = styled.h3`
   font-size: 16px;
   color: black;
-  text-align: left;
+  text-align: center;
   padding: 1px;
   margin: 0;
 `;
@@ -41,7 +42,7 @@ const CocktailDescription = styled.p`
   color: black;
   padding: 2px;
   overflow: scroll;
-  height: 100%;
+  height: 30%;
   background-color: #f5c342;
   border-radius: 5px;
 `;
@@ -50,16 +51,18 @@ const CocktailDataList = styled.div`
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  height: 30%;
 `;
 const Tag = styled.button`
   font-size: 0.8rem;
   color: black;
   outline: none;
-  padding: 2px;
-  margin: 2px;
+  padding: 5px;
+  margin: 5px;
   background-color: #f9db49;
   border-radius: 5px;
   border: none;
+  height: 1.5rem;
 `;
 
 const NoCocktailImage = styled.img``;
