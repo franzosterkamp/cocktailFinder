@@ -60,7 +60,7 @@ const Tag = styled.button`
   font-size: 0.8rem;
   color: black;
   outline: none;
-  padding: 0px 2px;
+  padding: 0px 0px;
   margin: 2px;
   background-color: #f9db49;
   border-radius: 5px;
@@ -80,12 +80,13 @@ export default function CocktailList({ searchValue }) {
 
   async function refreshCocktails() {
     const searchedCocktails = await getCocktails(searchValue);
+
     setCocktails(searchedCocktails);
   }
 
   React.useEffect(() => {
     refreshCocktails();
-  });
+  }, [searchValue]);
 
   if (cocktails == null) {
     return (

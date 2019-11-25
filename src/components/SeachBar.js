@@ -11,19 +11,15 @@ const SearchBar = styled.input`
   outline: none;
 `;
 
-const Search = ({ onSearch, inputValue }) => {
-  function handleChange(event) {
-    const value = event.target.value;
-    onSearch(value);
-  }
-
+export default function Search({ value, onChange }) {
   return (
     <SearchBar
       placeholder="Cocktail here!"
-      onChange={handleChange}
-      value={inputValue}
+      value={value}
+      onChange={event => {
+        const newSearchValue = event.target.value;
+        onChange(newSearchValue);
+      }}
     ></SearchBar>
   );
-};
-
-export default Search;
+}
