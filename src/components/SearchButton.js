@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import search from "../assets/search.svg";
 
-const SearchButton = styled.button`
+const Button = styled.button`
   width: 50px;
   height: 100%;
   border: none;
@@ -11,10 +11,10 @@ const SearchButton = styled.button`
   outline-color: #f5c342;
 `;
 
-export function SearchIcon({ onClick }) {
+export function SearchButton({ onClick }) {
   return (
-    <SearchButton onClick={onClick}>
-      <img src={search} alt="SearchButton" />
-    </SearchButton>
+    <Button onClick={onClick}>
+      <img src={search} alt="Search_sButton" />
+    </Button>
   );
 }
