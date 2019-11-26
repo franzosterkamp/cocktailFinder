@@ -22,10 +22,6 @@ const Title = styled.div`
   background-color: ${props => props.theme.primary};
 `;
 
-// export function handleSearch(value) {
-//   console.log(value);
-// }
-
 export default function Header({ searchValue, onValueChange, onClick }) {
   return (
     <AppBar>

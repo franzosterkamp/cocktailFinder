@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
+import PropTypes from "prop-types";
 
 const SearchBar = styled.input`
   text-align: center;
@@ -14,7 +15,7 @@ const SearchBar = styled.input`
 export default function Search({ value, onChange }) {
   return (
     <SearchBar
-      placeholder="Cocktail here!"
+      placeholder="cocktail here."
       value={value}
       onChange={event => {
         const newSearchValue = event.target.value;
