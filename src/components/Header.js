@@ -19,7 +19,7 @@ const Title = styled.div`
   font-size: 1rem;
   height: 100%;
   color: black;
-  background-color: #f9db49;
+  background-color: ${props => props.theme.primary};
 `;
 
 // export function handleSearch(value) {

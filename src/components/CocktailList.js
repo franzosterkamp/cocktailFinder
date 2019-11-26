@@ -11,7 +11,7 @@ const CocktailTagList = styled.div`
 const CocktailTag = styled.div`
   height: 400px;
   width: 200px;
-  background-color: #fcef87;
+  background-color: ${props => props.theme.secondBackground};
   border-radius: 7px;
   margin: auto;
   margin-top: 20px;
@@ -44,7 +44,7 @@ const CocktailDescription = styled.p`
   padding: 2px;
   overflow: scroll;
   height: 30%;
-  background-color: #f5c342;
+  background-color: ${props => props.theme.background};
   border-radius: 5px;
   box-shadow: 10px 10px 7px -9px rgba(0, 0, 0, 0.75);
 `;
@@ -62,7 +62,7 @@ const Tag = styled.button`
   outline: none;
   padding: 0px 0px;
   margin: 2px;
-  background-color: #f9db49;
+  background-color: ${props => props.theme.primary};
   border-radius: 5px;
   border: none;
   height: 1.5rem;

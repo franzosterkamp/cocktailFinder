@@ -14,7 +14,7 @@ const Button = styled.button`
 export function SearchButton({ onClick }) {
   return (
     <Button onClick={onClick}>
-      <img src={search} alt="Search_sButton" />
+      <img src={search} alt="Search_Button" />
     </Button>
   );
 }
