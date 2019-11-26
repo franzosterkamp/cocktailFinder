@@ -11,6 +11,7 @@ export default function GlobalStyles() {
         *::after,
         *::before {
           box-sizing: border-box;
+          transition: background 0.5s, color 0.5s;
         }
         body {
           margin: 0;
