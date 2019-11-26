@@ -9,7 +9,6 @@ import Footer from "./components/Footer";
 function App() {
   const [input, setInput] = React.useState("");
   const [storage, setStorage] = React.useState([]);
-
   const [theme, setTheme] = React.useState(themes.default);
 
   function handleThemeClick() {

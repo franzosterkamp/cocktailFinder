@@ -8,7 +8,7 @@ const Button = styled.button`
   border: none;
   background: white;
   cursor: pointer;
-  outline-color: #f5c342;
+  outline-color: white;
 `;
 
 export function SearchButton({ onClick }) {
