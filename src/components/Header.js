@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { SearchIcon } from "./SearchButton";
+import { SearchButton } from "./SearchButton";
 import Search from "./SeachBar";
 
 const AppBar = styled.div`
@@ -26,12 +26,12 @@ const Title = styled.div`
 //   console.log(value);
 // }
 
-export default function Header({ searchValue, onValueChange }) {
+export default function Header({ searchValue, onValueChange, onClick }) {
   return (
     <AppBar>
       <Title>Cocktail-Finder.</Title>
       <Search value={searchValue} onChange={onValueChange}></Search>
-      <SearchIcon></SearchIcon>
+      <SearchButton onClick={onClick}></SearchButton>
     </AppBar>
   );
 }

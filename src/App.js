@@ -4,14 +4,18 @@ import Header from "./components/Header";
 import CocktailList from "./components/CocktailList";
 
 function App() {
-  const [input, setInput] = React.useState("Gin");
+  const [input, setInput] = React.useState("");
+  const [storage, setStorage] = React.useState([]);
 
   return (
     <div>
       <GlobalStyles />
       <Header
-        searchValue={input}
-        onValueChange={searchValue => setInput(searchValue)}
+        searchValue={storage}
+        onClick={() => setInput(storage)}
+        onValueChange={searchValue => {
+          setStorage(searchValue);
+        }}
       />
       <CocktailList searchValue={input} />
     </div>
